@@ -1,0 +1,186 @@
+
+hr{
+	color: #036eb8;
+	border-color: #036eb8;
+	border-width: 1px;
+	margin: 30px auto 0;
+	width: 90%;
+}
+
+#agreeBtnBox{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn{
+	width: 260px;
+	height: 35px;
+	margin: 20px auto 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	border-radius: 20px;
+	-webkit-appearance: none;
+	background-color: #ff6a3d;
+	text-align: center;
+}
+
+#RLBox{
+	width: 260px;
+	height: 45px;
+	margin: 20px auto;
+	/*background-color: red;*/
+}
+
+.header h1{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.btnLeft{
+	width: 129px;
+	height: 35px;
+	margin: 0px 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	border-radius: 20px 0 0 20px;
+	-webkit-appearance: none;
+	background-color: #ff6a3d;
+	text-align: center;
+	float: left;
+}
+
+.btnRight{
+	width: 129px;
+	height: 35px;
+	margin: 0px 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	border-radius: 0px 20px 20px 0px;
+	-webkit-appearance: none;
+	background-color: #ff6a3d;
+	text-align: center;
+	float: right;
+}
+
+#addmemberBox{
+	width: 100%;
+	height: auto;
+	/*background-color: red;*/
+	min-height: 300px;
+}
+
+.memberBox{
+	padding-bottom: 15px;
+}
+
+#container_addmember #inputArea{
+	width: 100%;
+	height: 290px;
+	/*background-color: #fff;*/
+	bottom: 0;
+	padding-top: 50px;
+}
+
+#container_addmember #inputArea {
+	/*display: none;*/
+}
+
+#container_addmember .entry_input{
+	width: 240px;
+	height: 35px;
+	margin: 5px auto 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	display: block;
+	font-size: 16px;
+	color: gray;
+	border-radius: 20px;
+	border: 1px solid #036eb8;
+	/*background-color: #036eb8;*/
+	-webkit-appearance: none;
+	line-height: 18px;
+	z-index: 0;
+/*	-webkit-appearance:none !important;
+    -moz-appearance:none !important;
+    appearance:none !important;*/
+}
+
+.memberBox h2{
+	width: 100px;
+	margin: -12px auto 0;
+	font-size: 16px;
+	color: #036eb8;
+	text-align: center;
+	background-color: #fff;
+}
+
+.label{
+	font-size: 12px;
+	text-align: center;
+	margin: 8px auto 0;
+	width: auto;
+	display: block;
+}
+
+#plusBtnBox{
+	width: 80px;
+	height: 50px;
+	margin: -25px auto;
+	position: relative;
+	background-color: white;
+}
+
+#plusBtn{
+	width: 50px;
+	height: 50px;
+	background-color: #036eb8;
+	border-radius: 25px;
+	position: relative;
+	margin: 0 auto;
+	
+}
+
+#plus{
+	font-size: 30px;
+	position: absolute;
+	left: 15px;
+	color: white;
+}
+
+.nonactive{
+	background-color: rgba(3, 110, 184, 0.4) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

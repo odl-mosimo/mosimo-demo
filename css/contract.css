@@ -1,0 +1,50 @@
+
+
+#container_contract img{
+	padding-top: 50px;
+	width: 320px;
+}
+
+#agreeBtnBox{
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn{
+	width: 260px;
+	height: 35px;
+	margin: 20px auto 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	border-radius: 20px;
+	-webkit-appearance: none;
+	background-color: #ff6a3d;
+	text-align: center;
+}
+
+#agreement{
+
+}
+
+#fase2{
+	display: none;
+}
+
+.agreeFase2{
+	height: 160px !important;
+	background-color: #3e4448;
+}
+
+img#snsBtn{
+	width: 260px;
+	display: block;
+	margin: 0 auto;
+	padding-top: 20px;
+}

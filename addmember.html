@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+<!-- <meta name="viewport" content="width=device-width,minimal-ui"> -->
+<title>mosimo</title>
+<link href="css/addmember.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet">
+
+
+
+<!--- commonscript -->
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.js"></script>
+
+<!-- mainscript-->
+<script type="text/javascript" src="js/touch.js"></script>
+
+
+<!-- google-web-font -->
+<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body  onload="">
+  <div id="wrapper">
+
+<!-- ////////////////////////////////////////////////
+                      header
+//////////////////////////////////////////////// -->
+  <div class="header">
+    <h1>メンバーを追加</h1>
+  </div>
+
+<!-- ////////////////////////////////////////////////
+               container
+//////////////////////////////////////////////// -->
+
+    <div id="container_addmember">
+      <div id="addmemberBox">
+        <div id="inputArea">
+          <div class="memberBox">
+            <hr>
+            <h2>メンバー1</h2>
+            <form action="">
+              <label for="" class="label" >ニックネーム等を入力してください</label>
+              <input id="inputName" class="entry_input" type="text" placeholder="ニックネーム等" >
+              <label for="" class="label">Eメールアドレスを入力してください</label>
+              <input id="inputEmail" class="entry_input" type="email" placeholder="Eメールアドレス">
+            </form>
+          </div>
+          <hr>
+          <div id="plusBtnBox">
+            <div id="plusBtn" onclick="location.href='003.html'" class="nonactive"><span id="plus" >+</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="agreeBtnBox" class="">
+        <div id="fase1">
+          <div id="RLBox">
+            <div id="cancel" class="btnLeft">キャンセル</div>
+            <div id="cancel" class="btnRight" onclick="location.href='005.html'">追加</div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- ////////////////////////////////////////////////
+                  bottom_munu
+//////////////////////////////////////////////// -->
+
+
+  </div><!-- END#wrapper -->
+
+
+<script>
+  setEventListener("plusBtn",plus_member);
+  $("#inputEmail").blur(function(){
+    $("#plusBtn").removeClass("nonactive");
+  });
+
+</script>
+
+</body>
+</html>
+
+
+
+

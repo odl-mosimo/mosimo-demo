@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+<!-- <meta name="viewport" content="width=device-width,minimal-ui"> -->
+<title>mosimo</title>
+<link href="css/map.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet">
+
+
+
+<!--- commonscript -->
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.js"></script>
+
+<!-- mainscript-->
+<script type="text/javascript" src="js/touch.js"></script>
+
+
+<!-- google-web-font -->
+<script type="text/javascript"src="http://maps.google.com/maps/api/js?sensor=set_to_true_or_false"></script>
+<!-- <script type="text/javascript"src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCnhwlkdqXWb7FFBcfQyDMvUKrRkgsK0vs&sensor=false&libraries=geometry&language=ja"></script> -->
+<script type="text/javascript" src="js/map.js"></script>
+
+
+</head> 
+
+
+<body onload="">
+  <div id="wrapper">
+
+<!-- ////////////////////////////////////////////////
+                      header
+//////////////////////////////////////////////// -->
+  <div id="mapHeader">
+  <div id="topBar">
+    <img id="topMenuBar" src="img/topbar.png" alt="">
+  </div>
+  </div>
+
+<!-- ////////////////////////////////////////////////
+               container
+//////////////////////////////////////////////// -->
+
+    <div id="container_map">
+      <div id="drawerBtn"></div>
+      <div id="map_canvas" style="width: 100%; height: 90%; min-height:450px;"></div>
+      <div id="area_name"></div>
+      <div id="bottom_menu_map">
+        <img id="posBtn" src="img/posBtn.png"  alt="">
+        <img id="mainBtn" src="img/mainBtn.png" alt="">
+      </div>
+    </div>
+
+
+<!-- ////////////////////////////////////////////////
+               container_back
+//////////////////////////////////////////////// -->
+    <div id="container_back">
+      <img src="img/backarea.jpg" width="250px" alt="">
+    </div>
+
+
+<!-- ////////////////////////////////////////////////
+                  bottom_munu
+//////////////////////////////////////////////// -->
+    
+
+  </div><!-- END#wrapper -->
+
+
+<script>
+  // initialize();
+  // start_func();
+  famiryPos("all");
+  // putnewMarker(35.681382,139.766084);
+  // google.maps.LatLng(35.681382,139.766084)
+  setEventListener("drawerBtn",drawer);
+  setEventListener("mainBtn",getMyPos);
+
+
+</script>
+
+</body>
+</html>
+
+
+
+

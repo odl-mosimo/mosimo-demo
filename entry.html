@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- <meta name="viewport" content="width=device-width,minimal-ui"> -->
+<title>mosimo</title>
+<link href="css/style_entry.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet">
+
+
+
+<!--- commonscript -->
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-menu.js"></script>
+
+<!-- mainscript-->
+<script type="text/javascript" src="js/touch.js"></script>
+
+
+<!-- google-web-font -->
+<link href='http://fonts.googleapis.com/css?family=Jura' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body  onload="">
+  <div id="wrapper">
+
+<!-- ////////////////////////////////////////////////
+                      header
+//////////////////////////////////////////////// -->
+
+
+<!-- ////////////////////////////////////////////////
+               container
+//////////////////////////////////////////////// -->
+
+    <div id="container_entry">
+      <div id="entry_logoBox">
+        <img id="entry_logo" src="img/mosimo_logo.png" alt="">
+      </div>
+      
+      <div id="formBox" class="">
+        <div id="fase1">
+          <div class="entry_btn" id="btn_new">新規登録</div>
+          <div class="entry_btn" id="btn_login">ログイン</div>
+          <p>Change Language</p>
+        </div>
+        <div id="fase2">
+          <div class="entry_btn" id="btn_new" onclick="location.href='contract.html'"><span class="serif">OK</span></div>
+          <p>パスワードを忘れてしまった場合</p>
+        </div>
+      </div><!-- END#fromBox -->
+      
+      <div id="inputArea">
+        <form action="">
+          <input disabled class="entry_input" type="email" placeholder="メールアドレス" >
+          <input disabled class="entry_input" type="password" placeholder="パスワード">
+        </form>
+        
+      </div>
+
+    </div>
+<!-- ////////////////////////////////////////////////
+                  bottom_munu
+//////////////////////////////////////////////// -->
+
+
+  </div><!-- END#wrapper -->
+
+
+<script>
+  setEventListener_entry();
+
+</script>
+
+</body>
+</html>
+
+
+
+

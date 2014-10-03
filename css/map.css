@@ -1,0 +1,96 @@
+body{
+	border-radius: 10px;
+}
+
+#mapHeader{
+	background-color: #B8B8B8 !important;
+	width: 100%;
+	height: 44px;
+	position: fixed;
+	z-index: 1000;
+	-webkit-transition: all 0.15s;
+	transition: all 0.15s;
+}
+
+#container_map{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.drawer{
+	left: 240px;
+}
+
+#bottom_menu_map{
+	width: 100%;
+	height: 83px;
+	background-color: #3e4448;
+	position: absolute;
+	bottom: 0;
+	z-index: 1000;
+	border-radius: 0 0 10px 10px;
+}
+
+#drawerBtn{
+	width: 50px;
+	height: 50px;
+	z-index: 1000;
+	background-color: #fff;
+	position: absolute;
+	border-radius: 25px;
+	top: 70px;
+	left: 15px;
+	background-image: url("../img/taro.png");
+	background-size: 50px;
+}
+
+#posBtn{
+	width: 265px;
+	display: block;
+	margin: 7px auto 0;
+}
+
+#mainBtn{
+	width: 60px;
+	position: absolute;
+	bottom:10px;
+	left: 129px;
+}
+
+#area_name{
+	display: none;
+}
+
+
+#topMenuBar{
+	width: 320px;
+}
+
+
+
+#container_back{
+	z-index: -1;
+	background-color: #34383a;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

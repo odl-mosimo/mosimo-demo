@@ -1,0 +1,143 @@
+body,html{
+    oveflow: hidden;
+    height: 100%;
+}
+
+
+
+body{
+	overflow: hidden;
+}
+
+.serif{
+	font-family: sans-serif;
+}
+
+
+#wrapper{
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+	background-color: #036eb8;
+}
+
+#container_entry{
+	background-color: #3e4448;
+	height: 240px;
+	z-index: 10px;
+}
+
+#container_entry #entry_logoBox{
+	width: 263px;
+	margin: 0 auto;
+	display: block;
+	padding-top: 150px;
+	background-color: #3e4448;
+}
+
+#container_entry #entry_logoBox #entry_logo{
+	width: 263px;
+}
+
+#container_entry #formBox{
+	width: 100%;
+	height: 300px;
+	bottom:0;
+	position: absolute;
+	background-color: #3e4448;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    /*display: none;*/
+    z-index: 10;
+}
+
+
+#container_entry #formBox .entry_btn{
+	width: 260px;
+	height: 35px;
+	margin: 14px auto 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	display: block;
+	font-size: 20px;
+	color: white;
+	border-radius: 20px;
+	-webkit-appearance: none;
+	background-color: #ff6a3d;
+	text-align: center;
+}
+
+#container_entry .touched_login{
+	/*bottom: -150px !important;*/
+	height: 145px !important;
+	box-shadow: 5px -5px 15px 5px rgba(0,0,0,0.2);
+}
+
+
+.addshadow{
+	box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+}
+
+
+
+#container_entry #formBox #fase2{
+	display: none;
+	margin-top: 20px;
+}
+
+#container_entry #formBox #fase1 p{
+	color: white;
+	font-size: 13px;
+	text-align: center;
+	margin-top: 130px;
+	text-decoration: underline;
+	text-underline-position:5px;
+}
+
+
+#container_entry #formBox #fase2 p{
+	color: white;
+	font-size: 13px;
+	text-align: center;
+	margin-top: 20px;
+	text-decoration: underline;
+	text-underline-position:5px;
+}
+
+
+
+#container_entry #inputArea{
+	width: 100%;
+	height: 290px;
+	/*background-color: #fff;*/
+	position: absolute;
+	bottom: 0;
+}
+
+#container_entry #inputArea {
+	/*display: none;*/
+}
+
+#container_entry #inputArea .entry_input{
+	width: 240px;
+	height: 35px;
+	margin: 14px auto 0;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+	display: block;
+	font-size: 16px;
+	color: white;
+	border-radius: 20px;
+	border: 1px solid white;
+	background-color: #036eb8;
+	-webkit-appearance: none;
+	line-height: 14px;
+	z-index: 0;
+/*	-webkit-appearance:none !important;
+    -moz-appearance:none !important;
+    appearance:none !important;*/
+}
+
+
+

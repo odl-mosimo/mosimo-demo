@@ -1,0 +1,99 @@
+
+*{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+
+.header{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 1000;
+  background-color: #3e4448;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  /*border-radius: 5px 5px 0 0;*/
+}
+
+#header #logo{
+  width: 100px;
+  height: 50px;
+  margin: 6px auto;
+}
+
+
+#header #logo img{
+  width: 100px;
+}
+
+
+
+.header_btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+
+.header #backBtn{
+  width:50px;
+  height: 30px;
+  border: 1px solid rgb(94, 94, 94); 
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: white;
+  line-height: 30px;
+}
+
+
+
+#header_chat{
+  width: 320px;
+  height: 50px;
+  background-color: #00a6cb;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+
+
+
+/*input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="mail"],
+input[type="password"],
+button {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
