@@ -1,8 +1,8 @@
-body{
+body {
 	border-radius: 10px;
 }
 
-#mapHeader{
+#mapHeader {
 	background-color: #B8B8B8 !important;
 	width: 100%;
 	height: 44px;
@@ -12,7 +12,7 @@ body{
 	transition: all 0.15s;
 }
 
-#container_map{
+#container_map {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -20,11 +20,11 @@ body{
     transition: all 0.5s;
 }
 
-.drawer{
+.drawer {
 	left: 240px;
 }
 
-#bottom_menu_map{
+#bottom_menu_map {
 	width: 100%;
 	height: 83px;
 	background-color: #3e4448;
@@ -34,7 +34,7 @@ body{
 	border-radius: 0 0 10px 10px;
 }
 
-#drawerBtn{
+#drawerBtn {
 	width: 50px;
 	height: 50px;
 	z-index: 1000;
@@ -47,47 +47,120 @@ body{
 	background-size: 50px;
 }
 
-#posBtn{
+#posBtn {
 	width: 265px;
 	display: block;
 	margin: 7px auto 0;
 }
 
-#mainBtn{
+#mainBtn {
 	width: 60px;
 	position: absolute;
 	bottom:10px;
 	left: 129px;
 }
 
-#area_name{
+#area_name {
 	display: none;
 }
 
-
-#topMenuBar{
+ 
+#topMenuBar {
 	width: 320px;
 }
 
 
 
-#container_back{
+#container_back {
 	z-index: -1;
-	background-color: #34383a;
+	/*background-color: #34383a;*/
 	width: 100%;
 	height: 100%;
 	min-height: 500px;
 	position: absolute;
 }
 
+#container_back hr {
+	width: 75%;
+	color: white;
+	border-color: rgb(44, 44, 44);
+}
+
+.myBox {
+	width: 77%;
+	height: 250px;
+	background-color: #34383a;
+	padding-top: 43px;
+}
+
+.myBox .myFace {
+	display: block;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+
+.myBox .myName {
+	text-align: center;
+	padding-top: 5px;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.myBox .lastTime {
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+	font-size: 12px;
+}
+
+.myBox .lastTimeDisp {
+	text-align: center;
+	color: white;
+	font-size: 24px;
+}
 
 
+.famBox {
+	width: 77%;
+	height: 65px;
+	background-color: #34383a;
+}
 
 
+.famBox .famFace {
+	width: 50px;
+	padding: 7px 15px 0;
+	display: inline-block;
+}
 
+.famBox .famName {
+	display: inline-block;
+	color: white;
+	width: 50px;
+	vertical-align: top;
+	padding-top: 22px;
+}
 
+.famBox .famTime {
+	width: 80px;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 22px;
 
+}
 
+.famBox .famTime .last {
+	display: inline-block;
+	width: 30px;
+	padding-top: 22px;
+	color: white;
+	font-size: 4px;
+	padding-top: 5px;
+	vertical-align: top;
+	margin-right: -7px;
+}
 
 
 

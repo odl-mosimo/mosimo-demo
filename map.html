@@ -58,7 +58,42 @@
                container_back
 //////////////////////////////////////////////// -->
     <div id="container_back">
-      <img src="img/backarea.jpg" width="250px" alt="">
+      <div class="myBox">
+        <img class="myFace" src="img/taro.png" alt="">
+        <h2 class="myName">法政 太郎</h2>
+        <p class="lastTime">最終更新時間</p>
+        <p class="lastTimeDisp">16:37</p>
+      </div>
+      <hr>
+
+      <div class="famBox">
+        <img class="famFace" src="img/taro.png" alt="">
+        <p class="famName">法政家</p>
+        <p class="famTime"><span class="last">最終</span>18:26</p>
+      </div>
+      <hr>
+
+      <div class="famBox">
+        <img class="famFace" src="img/taro.png" alt="">
+        <p class="famName">父さん</p>
+        <p class="famTime"><span class="last">最終</span>18:26</p>
+      </div>
+      <hr>
+
+      <div class="famBox">
+        <img class="famFace" src="img/taro.png" alt="">
+        <p class="famName">母さん</p>
+        <p class="famTime"><span class="last">最終</span>10:09</p>
+      </div>
+      <hr>
+
+      <div class="famBox">
+        <img class="famFace" src="img/taro.png" alt="">
+        <p class="famName">桃子</p>
+        <p class="famTime"><span class="last">最終</span>17:12</p>
+      </div>
+
+
     </div>
 
 
@@ -76,8 +111,8 @@
   famiryPos("all");
   // putnewMarker(35.681382,139.766084);
   // google.maps.LatLng(35.681382,139.766084)
-  setEventListener("drawerBtn",drawer);
-  setEventListener("mainBtn",getMyPos);
+  setEventListener("wrapper",init);
+  // setEventListener("mainBtn",getMyPos);
 
 
 </script>

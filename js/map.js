@@ -4,31 +4,17 @@ var map;
 var myLatlng;
 
 
-
-
-  // function initialize() {
-  //   var latlng = new google.maps.LatLng(35.689753, 139.700385);
-  //   var myOptions = {
-  //     zoom: 14,
-  //     center: latlng,
-  //     mapTypeId: google.maps.MapTypeId.ROADMAP
-  //   };
-  //   var map = new google.maps.Map(document.getElementById("map_canvas"),
-  //       myOptions);
-  // }
-
-
-  function start_func(){
+  function start_func() {
     get_location();     
   }
 
-  function get_location(){
+  function get_location() {
     document.getElementById("area_name").innerHTML = '位置情報取得します';
       if (navigator.geolocation) {
         // 現在の位置情報取得を実施
-        navigator.geolocation.getCurrentPosition(successCallback,errorCallback);
+        navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
-      }else{
+      } else {
         message = "本ブラウザではGeolocationが使えません"; document.getElementById("area_name").innerHTML = message;
       }
   }
@@ -47,10 +33,10 @@ var myLatlng;
   }
 
 
-  function initialize(x,y) {
+  function initialize(x, y) {
 
     document.getElementById("area_name").innerHTML = 'google map情報を取得中';
-    myLatlng = new google.maps.LatLng(x,y);
+    myLatlng = new google.maps.LatLng(x, y);
         
     var mapOptions = {
       isableDefaultUI : true,
@@ -83,11 +69,11 @@ var myLatlng;
   }
 
 
-  function get_area_name(latLng_now){
+  function get_area_name(latLng_now) {
     // 座標から住所名を取得
     var geocoder = new google.maps.Geocoder();
       geocoder.geocode({latLng: latLng_now}, function(results, status){
-      if(status == google.maps.GeocoderStatus.OK){
+      if(status == google.maps.GeocoderStatus.OK) {
           document.getElementById("area_name").innerHTML = results[0].formatted_address+'付近にいます';
       } else {
         // エラーの場合
@@ -96,7 +82,7 @@ var myLatlng;
   }
 
 
-  function putnewMarker(newlatitude,newlongitude) {
+  function putnewMarker(newlatitude, newlongitude) {
     var myLatlng2 = new google.maps.LatLng(newlatitude, newlongitude);
     // var distance = google.maps.geometry.spherical.computeDistanceBetween(myLatlng, myLatlng2);
     // var betplace = new google.maps.LatLng((newlatitude + myLatlng.k)/2,
@@ -130,45 +116,45 @@ var myLatlng;
 var famName = new Array();
 var famLatLng = new Array();
 var famMarkers = [
-            ['父',35.681382,139.766084],
-            ['母',35.737820,139.653566],
-            ['妹',35.658517,139.701334],
-            ['兄',35.622716,139.739152],
+            ['父', 35.681382, 139.766084],
+            ['母', 35.737820, 139.653566],
+            ['妹', 35.658517, 139.701334],
+            ['兄', 35.622716, 139.739152],
             ];
   // 家族位置表示用その場しのぎ
-  function famiryPos(who){
+  function famiryPos(who) {
     var myOptions = {
         zoom: 11,
         center: new google.maps.LatLng(35.690921, 139.700258),
         mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-    var famMap = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+    var famMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
     
     
-    for(i=0;i<famMarkers.length;i++){
+    for(i=0;i<famMarkers.length;i++) {
        famName[i] = famMarkers[i][0];
-       famLatLng[i] = new google.maps.LatLng(famMarkers[i][1],famMarkers[i][2]);
+       famLatLng[i] = new google.maps.LatLng(famMarkers[i][1], famMarkers[i][2]);
     }
-    if(who=="all"){
-      for(i=0;i<famMarkers.length;i++){
-        createMarkers(famLatLng[i],famName[i],famMap);
+    if(who=="all") {
+      for(i=0;i<famMarkers.length;i++) {
+        createMarkers(famLatLng[i], famName[i], famMap);
       }
     }
 
   }
 
-  function createMarkers(famLatLng,famName,map){
+  function createMarkers(famLatLng, famName,map) {
     var infoWindow = new google.maps.InfoWindow();
     var marker = new google.maps.Marker({position: famLatLng,map: map});
         google.maps.event.addListener(marker, 'click', function() {
         infoWindow.setContent(famName);
-        infoWindow.open(map,marker);   
+        infoWindow.open(map, marker);   
         });
   }
 
 
-  function getMyPos(){
+  function getMyPos() {
     get_location();
 
   }
