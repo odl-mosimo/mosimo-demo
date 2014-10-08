@@ -18,6 +18,8 @@ body {
 	position: absolute;
 	-webkit-transition: all 0.5s;
     transition: all 0.5s;
+    /*display: none;*/
+    background-color: #3e4448;
 }
 
 .drawer {
@@ -35,20 +37,27 @@ body {
 }
 
 #drawerBtn {
-	width: 50px;
+	width: 70px;
 	height: 50px;
 	z-index: 1000;
 	background-color: #fff;
 	position: absolute;
-	border-radius: 25px;
+	border-radius: 0 25px 25px 0;
 	top: 70px;
-	left: 15px;
-	background-image: url("../img/taro.png");
-	background-size: 50px;
+	background-image: url("../img/a-04.png");
+	background-size: 45px;
+}
+
+#drawerImg {
+	width: 50px;
+	z-index: 1000;
+	position: absolute;
+	top: 0px;
+	left: 20px;
 }
 
 #posBtn {
-	width: 265px;
+	width: 175px;
 	display: block;
 	margin: 7px auto 0;
 }
@@ -57,7 +66,7 @@ body {
 	width: 60px;
 	position: absolute;
 	bottom:10px;
-	left: 129px;
+	left: 80px;
 }
 
 #area_name {
@@ -67,6 +76,8 @@ body {
  
 #topMenuBar {
 	width: 320px;
+	position: absolute;
+	top: 0;
 }
 
 
@@ -125,6 +136,7 @@ body {
 	width: 77%;
 	height: 65px;
 	background-color: #34383a;
+	position: relative;
 }
 
 
@@ -162,8 +174,218 @@ body {
 	margin-right: -7px;
 }
 
+.famBox .famWrap {
+	width: 100%;
+	height: 65px;
+	position: absolute;
+}
+
+.famBox .famCover {
+	width: 100%;
+	height: 65px;
+	position: absolute;
+}
 
 
 
+/*メッセージエリア*/
 
+#container_message {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background-color: #34383a;
+    padding-top: 50px;
+    display: none;
+}
+
+
+#container_message .messageBox {
+	width: 95%;
+	height: auto;
+	min-height: 75px;
+	max-width: 320px;
+	margin: 0px auto;
+	/* background-color: red; */
+	padding-top: 20px;
+}
+
+#container_message .messageBox .host_face {
+	width: 47px;
+	height: 100%;
+	float: left;
+}
+
+#container_message .messageBox .host_face img{
+	width: 40px;
+}
+
+#container_message .messageBox .host_name {
+	width: 15%;
+	height: 20px;
+	margin-left: 5px;
+	/* background-color: green; */
+	position: relative;
+	color: #8e8e8e;
+	font-size: 6px;
+
+}
+
+#container_message .messageBox .my_face {
+	width: 47px;
+	height: 100%;
+	float: right;
+}
+
+#container_message .messageBox .my_face img{
+	width: 40px;
+}
+
+#container_message .messageBox .my_name {
+	width: 15%;
+	height: 20px;
+	margin-left: 5px;
+	/* background-color: green; */
+	position: relative;
+	color: #8e8e8e;
+	font-size: 6px;
+
+}
+
+#container_message .messageBox .textBox {
+	width: 195px;
+	height: auto;
+	float: left;
+	/*background-color: gray;*/
+}
+
+#container_message .messageBox .myTextBox {
+	width: 195px;
+	height: auto;
+	float: right;
+	margin: 0 40px 0 0;
+	color: white;
+}
+
+#container_message .messageBox .textBox p {
+	font-size: 14px;
+	padding: 5px 10px;
+	color: gray;
+	font-weight: 200;
+}
+
+#container_message .messageBox .myTextBox p {
+	font-size: 14px;
+	padding: 5px 10px;
+	color: gray;
+	font-weight: 200;
+}
+
+
+#container_message .messageBox .answer {
+	width: 195px;
+	height: auto;
+	min-height: 32px;
+	float: left;
+	background-color: white;
+	/* background-image: url("../img/answerHead.png"); */
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	z-index: 0;
+	left: 15px;
+	border-radius: 10px;
+}
+
+#container_message .messageBox .myTextBox .textBoxOrange {
+	background-color: orange !important;
+}
+
+#container_message .messageBox .myTextBox .textBoxOrange p {
+	color: white !important;
+}
+
+#message_1 {
+	display: none;
+}
+
+#message_2 {
+	display: none;
+}
+
+#container_message #inputTextBox {
+	width: 100%;
+	height: 40px;
+	background-color: #34383a;
+	position: fixed;
+	bottom: 0;
+}
+
+
+#container_message #inputTextBox #inputText {
+	width: 70%;
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+
+#topBar {
+	width: 100%;
+	height: 42px;
+	position: relative;
+}
+ 
+
+#topBar .navBtn {
+	width: 32%;
+	height: 40px;
+	display: inline-block;
+	-webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#coverBox {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 42px;
+}
+
+#topBar .navBtnCover {
+	width: 32%;
+	height: 40px;
+	/*background-color: orange;*/
+	display: inline-block;
+}
+
+.orange {
+	background-color: orange;
+}
+
+
+#sendMessage {
+	background-color: #fff;
+	float: right;
+	margin: 0 20px 0;
+	font-size: 8px;
+	width: 35px;
+	text-align: center;
+	color: gray;
+	border-radius: 3px;
+}
+
+#sendMessage p{
+	padding: 5px; 
+}
+
+#messageBox {
+	width: 80%;
+}
+
+
+#container_setting {
+	z-index: -10;
+	display: none;
+}
 

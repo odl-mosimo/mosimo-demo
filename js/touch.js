@@ -6,48 +6,99 @@ function init(e) {
 	var tmpId = nowElement.id;
 	var tmpClass = nowElement.className;
 	var famCheck = tmpClass.substr(0,3); 
-	console.log(famCheck);
+	var famNum;
+	var famFace;
+	console.log(tmpId);
+	// console.log(famCheck);
 
+	if(e.type == "touchend") {
 
-	// var family = [ "太郎",
-	// 			   "家族",
-	// 			   "父さん",
-	// 			   "母さん",
-	// 			   "桃子"
-	// 			];
+		if(tmpId == "drawerImg") {
+			drawer(e);
+		}else if(famCheck == "fam") {
+			// もし家族がクリックされたら
+			famNum = $(nowElement).parent(".famBox").attr("famNum");
+			famFace = $(nowElement).prev(".famWrap").find(".famFace").attr("src");
+			console.log(famFace);
+			if(famNum == "all") {
+				familyPos("all");
+			}else{
+				selectedPos(famNum);
+			}
+			$("drawerImg").fadeOut(300, function() {
+				$("drawerImg").attr("src",famFace);
+				$("drawerImg").fadeIn(300);
+			});
+			drawer(e);
 
-	// 	family[0][0] = "url('../img/.png')",
-	// 	family[1][0] = "url('../img/.png')",
-	// 	family[2][0] = "url('../img/.png')",
-	// 	family[3][0] = "url('../img/.png')",
-	// 	family[4][0] = "url('../img/.png')";
+		}else if(tmpId == "mainBtn") {
+			getMyPos();
+			$("#message_1").fadeIn(10);
 
-
-	var family = {
-		
-		name: "家族"
-
-		,function name() {
-
-			console.log(this.name);
-		
+		}else if(tmpId == "positionBox") {
+			getMyPos();
+			$("#container_map").fadeIn(10, function() {
+				$("#container_message").fadeOut(100);
+			});
+		}else if(tmpId == "topMenuBar") {
+			$("#container_message").fadeIn(10, function() {
+				$("#container_map").fadeOut(100);
+			});
+		}else if(tmpId == "papaPos") {
+			$("#container_map").fadeIn(10, function() {
+				$("#container_message").fadeOut(100);
+				selectedPos(1);
+			});
+			
+		}else if(tmpId == "mamPos") {			
+			$("#container_map").fadeIn(10, function() {
+				$("#container_message").fadeOut(100);
+				selectedPos(2);
+			});
+		}else if(tmpId == "sisPos") {
+			$("#container_map").fadeIn(10, function() {
+				$("#container_message").fadeOut(100);
+				selectedPos(3);
+			});
+		}else if(tmpId == "mapBtnCover") {
+			$("#mapBtn").removeClass("orange");
+			$("#msgBtn").removeClass("orange");
+			$("#setBtn").removeClass("orange");
+			$("#mapBtn").addClass("orange");
+			$("#container_map").fadeIn(10, function() {
+				$("#container_message").fadeOut(100);
+				$("#container_setting").fadeOut(100);
+			});
+		}else if(tmpId == "setBtnCover") {
+			$("#mapBtn").removeClass("orange");
+			$("#msgBtn").removeClass("orange");
+			$("#setBtn").removeClass("orange");
+			$("#setBtn").addClass("orange");
+			$("#container_setting").fadeIn(10, function() {
+				$("#container_map").fadeOut(100);
+				$("#container_message").fadeOut(100);
+			});
+		}else if(tmpId == "msgBtnCover") {
+			$("#mapBtn").removeClass("orange");
+			$("#msgBtn").removeClass("orange");
+			$("#setBtn").removeClass("orange");
+			$("#msgBtn").addClass("orange");
+			$("#container_message").fadeIn(10, function() {
+				$("#container_map").fadeOut(100);
+				$("#container_setting").fadeOut(100);
+			});
+		}else if(tmpId == "sendMessage") {
+			var nowText = document.getElementById("inputText").value;
+			$("#message_2").fadeIn(200, function() {
+				document.getElementById("messageBox").textContent = nowText;
+			});
+		}else if(tmpId == "sendText") {
+			var nowText = document.getElementById("inputText").value;
+			$("#message_2").fadeIn(200, function() {
+				document.getElementById("messageBox").textContent = nowText;
+			});
 		}
-	};
-
-
-
-	console.log(family[0][0]);
-
-
-	if(tmpId == "drawerBtn") {
-		drawer(e);
-	}else if(famCheck == "fam") {
-		// もし家族がクリックされたら
-		document.getElementById("drawerBtn").style.backgroundImage = "url('img_tree.png')";
-		drawer(e);
-
 	}
-
 }
 
 
@@ -83,24 +134,33 @@ function setEventListener_contract() {
 }
 
 function touch_entry(e) {
+
+	var nowElement = e.srcElement;
+	var tmpId = nowElement.id;
+
+
 	if(e.type=="touchend"){
 
-		if(loginArea == "close") {
-			$("#formBox").addClass("touched_login");
-			$("#container_entry").addClass("addshadow");
-			$("#fase1").fadeOut(200, function() {
-										$("#fase2").fadeIn(200);
-									});
-			setTimeout(function() {
-				$(".entry_input").removeAttr("disabled");	
-			}, 1000)
-			
-			loginArea = "open";
+		if(tmpId == "form_login"){
+			if(loginArea == "close") {
+				$("#formBox").addClass("touched_login");
+				$("#container_entry").addClass("addshadow");
+				$("#fase1").fadeOut(200, function() {
+											$("#fase2").fadeIn(200);
+										});
+				setTimeout(function() {
+					$(".entry_input").removeAttr("disabled");	
+				}, 1000)
+				
+				loginArea = "open";
 
-		}else if(loginArea == "open") {
-			$("#formBox").removeClass("touched_login");
-			$("#container_entry").removeClass("addshadow");
-			loginArea = "close";
+			}else if(loginArea == "open") {
+				$("#formBox").removeClass("touched_login");
+				$("#container_entry").removeClass("addshadow");
+				loginArea = "close";
+			}
+		}else if(tmpId == "btn_new") {
+			location.href = "contract.html";
 		}
 	}
 }

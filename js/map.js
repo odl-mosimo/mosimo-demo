@@ -9,7 +9,7 @@ var myLatlng;
   }
 
   function get_location() {
-    document.getElementById("area_name").innerHTML = '位置情報取得します';
+    document.getElementById("positionBox").innerHTML = '位置情報送信中です';
       if (navigator.geolocation) {
         // 現在の位置情報取得を実施
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -74,7 +74,7 @@ var myLatlng;
     var geocoder = new google.maps.Geocoder();
       geocoder.geocode({latLng: latLng_now}, function(results, status){
       if(status == google.maps.GeocoderStatus.OK) {
-          document.getElementById("area_name").innerHTML = results[0].formatted_address+'付近にいます';
+          document.getElementById("positionBox").innerHTML = results[0].formatted_address+'付近にいます';
       } else {
         // エラーの場合
       }
@@ -117,12 +117,12 @@ var famName = new Array();
 var famLatLng = new Array();
 var famMarkers = [
             ['父', 35.681382, 139.766084],
-            ['母', 35.737820, 139.653566],
-            ['妹', 35.658517, 139.701334],
-            ['兄', 35.622716, 139.739152],
+            ['父さん', 35.737820, 139.653566],
+            ['母さん', 35.658517, 139.701334],
+            ['桃子', 35.622716, 139.739152],
             ];
   // 家族位置表示用その場しのぎ
-  function famiryPos(who) {
+  function familyPos(who) {
     var myOptions = {
         zoom: 11,
         center: new google.maps.LatLng(35.690921, 139.700258),
@@ -156,10 +156,26 @@ var famMarkers = [
 
   function getMyPos() {
     get_location();
-
   }
 
 
+  // 個別の位置表示
+  function selectedPos(who) {
+
+    var myOptions = {
+        zoom: 15,
+        center: new google.maps.LatLng(famMarkers[who][1], famMarkers[who][2]),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+    var famMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+        famName[who] = famMarkers[who][0];
+        famLatLng[who] = new google.maps.LatLng(famMarkers[who][1], famMarkers[who][2]);
+  
+        createMarkers(famLatLng[who], famName[who], famMap);
+    
+  }
 
 
 
