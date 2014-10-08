@@ -20,7 +20,6 @@ body {
     transition: all 0.5s;
     /*display: none;*/
     background-color: #3e4448;
-    overflow: hidden;
 }
 
 .drawer {
@@ -35,7 +34,6 @@ body {
 	bottom: 0;
 	z-index: 1000;
 	border-radius: 0 0 10px 10px;
-	overflow: hidden;
 }
 
 #drawerBtn {
@@ -55,7 +53,6 @@ body {
 	z-index: 1000;
 	position: absolute;
 	top: 0px;
-	left: 0;
 	left: 20px;
 }
 
@@ -92,7 +89,6 @@ body {
 	height: 100%;
 	min-height: 500px;
 	position: absolute;
-	display: none;
 }
 
 #container_back hr {
@@ -105,13 +101,13 @@ body {
 	width: 77%;
 	height: 250px;
 	background-color: #34383a;
-	padding-top: 28px;
+	padding-top: 43px;
 }
 
 .myBox .myFace {
 	display: block;
 	margin: 0 auto;
-	padding-top: 15px;
+	padding-top: 20px;
 }
 
 .myBox .myName {
@@ -124,7 +120,7 @@ body {
 
 .myBox .lastTime {
 	text-align: center;
-	padding-top: 5px;
+	padding-top: 10px;
 	color: white;
 	font-size: 12px;
 }
