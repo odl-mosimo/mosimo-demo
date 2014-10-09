@@ -11,10 +11,16 @@ function init(e) {
 	console.log(tmpId);
 	// console.log(famCheck);
 
-	if(e.type == "touchend") {
+	if(e.type == "touchstart") {
+		if(tmpId == "bottom_menu_map") {
+			e.preventDefault();
+		}
+	}else if(e.type == "touchend") {
 
 		if(tmpId == "drawerImg") {
 			drawer(e);
+			$("#container_back").fadeIn(10);
+
 		}else if(famCheck == "fam") {
 			// もし家族がクリックされたら
 			famNum = $(nowElement).parent(".famBox").attr("famNum");
@@ -25,10 +31,10 @@ function init(e) {
 			}else{
 				selectedPos(famNum);
 			}
-			$("drawerImg").fadeOut(300, function() {
-				$("drawerImg").attr("src",famFace);
-				$("drawerImg").fadeIn(300);
-			});
+			// $("#drawerImg").fadeOut(300, function() {
+				$("#drawerImg").attr("src",famFace);
+			// 	$("drawerImg").fadeIn(300);
+			// });
 			drawer(e);
 
 		}else if(tmpId == "mainBtn") {
@@ -68,6 +74,7 @@ function init(e) {
 			$("#container_map").fadeIn(10, function() {
 				$("#container_message").fadeOut(100);
 				$("#container_setting").fadeOut(100);
+				$("#container_back").fadeOut(100);
 			});
 		}else if(tmpId == "setBtnCover") {
 			$("#mapBtn").removeClass("orange");
@@ -77,6 +84,7 @@ function init(e) {
 			$("#container_setting").fadeIn(10, function() {
 				$("#container_map").fadeOut(100);
 				$("#container_message").fadeOut(100);
+				$("#container_back").fadeOut(100);
 			});
 		}else if(tmpId == "msgBtnCover") {
 			$("#mapBtn").removeClass("orange");
@@ -86,16 +94,19 @@ function init(e) {
 			$("#container_message").fadeIn(10, function() {
 				$("#container_map").fadeOut(100);
 				$("#container_setting").fadeOut(100);
+				$("#container_back").fadeOut(100);
 			});
 		}else if(tmpId == "sendMessage") {
 			var nowText = document.getElementById("inputText").value;
 			$("#message_2").fadeIn(200, function() {
 				document.getElementById("messageBox").textContent = nowText;
+				document.getElementById("inputText").value = "";
 			});
 		}else if(tmpId == "sendText") {
 			var nowText = document.getElementById("inputText").value;
 			$("#message_2").fadeIn(200, function() {
 				document.getElementById("messageBox").textContent = nowText;
+				document.getElementById("inputText").value = "";
 			});
 		}
 	}
