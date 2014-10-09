@@ -11,24 +11,37 @@ function init(e) {
 	console.log(tmpId);
 	// console.log(famCheck);
 
-	if(e.type == "touchend") {
+	if(e.type == "touchstart") {
+
+		if(tmpId == "bottom_menu_map") {
+			e.preventDefault();
+		}
+
+	}else if(e.type == "touchend") {
 
 		if(tmpId == "drawerImg") {
 			drawer(e);
+			$("#container_back").fadeIn(10);
 		}else if(famCheck == "fam") {
 			// もし家族がクリックされたら
 			famNum = $(nowElement).parent(".famBox").attr("famNum");
 			famFace = $(nowElement).prev(".famWrap").find(".famFace").attr("src");
 			console.log(famFace);
+
+
 			if(famNum == "all") {
 				familyPos("all");
 			}else{
 				selectedPos(famNum);
 			}
-			$("drawerImg").fadeOut(300, function() {
-				$("drawerImg").attr("src",famFace);
-				$("drawerImg").fadeIn(300);
+
+
+			$("#drawerImg").fadeOut(300, function() {
+				$("#drawerImg").attr("src", famFace);
+				$("#drawerImg").fadeIn(300);
 			});
+
+
 			drawer(e);
 
 		}else if(tmpId == "mainBtn") {
@@ -77,6 +90,7 @@ function init(e) {
 			$("#container_setting").fadeIn(10, function() {
 				$("#container_map").fadeOut(100);
 				$("#container_message").fadeOut(100);
+				$("#container_back").fadeOut(100);
 			});
 		}else if(tmpId == "msgBtnCover") {
 			$("#mapBtn").removeClass("orange");
@@ -96,7 +110,11 @@ function init(e) {
 			var nowText = document.getElementById("inputText").value;
 			$("#message_2").fadeIn(200, function() {
 				document.getElementById("messageBox").textContent = nowText;
+				footerStart(container_message);
 			});
+
+		}else if(tmpId == "bottom_menu_map") {
+
 		}
 	}
 }
@@ -194,6 +212,14 @@ function plus_member(e) {
 }
 
 
+
+// 強制的に一番下までスクロールさせる
+function footerStart(selector){
+      // #itemまでスクロール
+    $('html,body').animate({scrollTop: $(selector).offset().top},'slow');
+    //スクロールの着地点を生成
+}
+ //セレクタ指定
 
 
 
