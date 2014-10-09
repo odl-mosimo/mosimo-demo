@@ -1,4 +1,4 @@
-#container_contract img{
+img{
 	width: 320px;
 	position: absolute;
 }
@@ -6,7 +6,7 @@
 .btn{
 	width: 260px;
 	height: 35px;
-	margin: 20px auto 0;
+	margin: 0 auto;
 	padding-top: 7px;
 	padding-bottom: 3px;
 	display: block;
